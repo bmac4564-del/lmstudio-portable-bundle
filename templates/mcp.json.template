@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "brave-search": {
+      "command": "{{POWERSHELL_EXE}}",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "{{BRAVE_LAUNCHER_PATH}}"
+      ]
+    },
+    "firecrawl": {
+      "command": "{{POWERSHELL_EXE}}",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "{{FIRECRAWL_LAUNCHER_PATH}}"
+      ]
+    },
+    "fetch": {
+      "command": "{{POWERSHELL_EXE}}",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "{{FETCH_LAUNCHER_PATH}}"
+      ]
+    },
+    "research-gateway": {
+      "command": "{{POWERSHELL_EXE}}",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "{{RESEARCH_GATEWAY_LAUNCHER_PATH}}"
+      ],
+      "env": {
+        "RESEARCH_GATEWAY_URL": "{{RESEARCH_GATEWAY_URL}}"
+      }
+    },
+    "skill-router": {
+      "command": "{{POWERSHELL_EXE}}",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "{{SKILL_ROUTER_LAUNCHER_PATH}}"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

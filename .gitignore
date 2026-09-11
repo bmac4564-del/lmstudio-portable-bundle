@@ -1,0 +1,9 @@
+output/
+*.log
+.env
+.env.*
+!.env.example
+.venv/
+**/.venv/
+**/.lmstudio/
+**/.lmstudio/*
