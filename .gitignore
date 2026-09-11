@@ -5,5 +5,5 @@ output/
 !.env.example
 .venv/
 **/.venv/
+.lmstudio/
 **/.lmstudio/
-**/.lmstudio/*
