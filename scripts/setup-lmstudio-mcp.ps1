@@ -68,7 +68,6 @@ $tokens = @{
   "{{WSL_EXE}}" = $wsl
   "{{WSL_DISTRO}}" = $WslDistro
   "{{RESEARCH_GATEWAY_PATH}}" = $ResearchGatewayPath
-  "{{RESEARCH_GATEWAY_PYTHON}}" = "$ResearchGatewayPath/.venv/bin/python"
   "{{RESEARCH_GATEWAY_URL}}" = $ResearchGatewayUrl
   "{{SKILL_ROUTER_PATH}}" = $SkillRouterPath
   "{{SKILL_ROUTER_PYTHON}}" = "$SkillRouterPath/.venv/bin/python"
@@ -121,4 +120,4 @@ Write-Host "  mcp.json: $mcpPath"
 Write-Host ""
 Write-Host "Next:"
 Write-Host "  1) Open LM Studio > Program > Integrations > MCP and verify listed servers."
-Write-Host "  2) In WSL: start SearXNG + research gateway + skill-router services before chatting."
+Write-Host "  2) In WSL: start SearXNG and skill-router if needed; the research gateway MCP launcher starts its HTTP service on demand."

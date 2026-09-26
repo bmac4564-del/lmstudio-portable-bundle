@@ -35,7 +35,7 @@ On each target machine, set up both repos and install dependencies:
 cd /home/<you>/projects/research-gateway
 cp .env.example .env   # fill BRAVE_API_KEY and FIRECRAWL_API_KEY here
 uv sync
-./scripts/start_gateway.sh  # optional but recommended to run before LM Studio
+./scripts/start_gateway.sh  # optional manual startup; the MCP launcher starts it when needed
 
 # inside WSL, for skill-router gateway
 cd /home/<you>/work/repos/skill-router-gateway
@@ -46,6 +46,8 @@ cp config.yaml.example config.yaml   # tweak if needed
 ```
 
 For research-gateway, start any required services you use (for example `docker compose up -d searxng`).
+
+The MCP launcher starts the research gateway HTTP service when needed and keeps startup text off MCP stdout. To keep the MCP connection available when that service cannot start, use a `research-gateway` checkout with the bridge resilience fix as well. The service repo must be updated separately; this bundle does not contain its source.
 
 ## 2) Install Windows-side LM Studio MCP files
 
